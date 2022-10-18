@@ -24,7 +24,7 @@ if has_key(shells,extension)
 	let fileshell = shells[extension]
 
 	if a:portable
-		let line =  "#! /usr/bin/env " . fileshell 
+		let line =  "#!/usr/bin/ " . fileshell 
 	else 
 		let line = "#! " . system("which " . fileshell)
 	endif
